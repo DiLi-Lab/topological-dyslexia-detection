@@ -1,6 +1,6 @@
-This repository contains code to reproduce the results from the paper [<em>Fixation Sequences as Time Series: A Topological Approach to Dyslexia Detection</em>]().
+This repository contains code to reproduce the results from the paper [<em>Fixation Sequences as Time Series: A Topological Approach to Dyslexia Detection</em>](https://doi.org/10.1145/3797246.3803045).
 In that paper, fixation sequences are interpreted as time series, based on which a topological pipeline for dyslexia detection is introduced.
-The results that this repository creates are obtained by training and evaluating this pipeline on the corpus introduced in  [<em>The Copenhagen Corpus of Eye Tracking Recordings from Natural Reading of Danish Texts</em>](https://aclanthology.org/2022.lrec-1.182/) and expanded in [<em>Reading Does Not Equal Reading: Comparing, Simulating and Exploiting Reading Behavior across Populations</em>](https://aclanthology.org/2024.lrec-main.1187/).
+The results that this repository creates are obtained by training and evaluating this pipeline on the corpus introduced by [Hollenstein et al.](https://aclanthology.org/2022.lrec-1.182/) and expanded by [Reich et al.](https://aclanthology.org/2024.lrec-main.1187/).
 
 ---
 
@@ -12,10 +12,10 @@ Python 3.11 or higher is required. Other dependencies are specified in `pyprojec
 
 __Data__
 
-The CopCo corpus is available for download [here](https://osf.io/ud8s5/).
-For the scripts of this repository to run, the data must be placed in `./data_copco/` with the following structure:
+The CopCo corpus can be downloaded via [pymovements](https://pymovements.readthedocs.io) or from its [OSF repository](https://osf.io/ud8s5/).
+For the scripts of this repository to run, the data must be placed in `./data_copco/` according to the following structure:
 
-```
+```text
 data_copco/
 ├── ExtractedFeatures/
 │   └── P{subject_id}.csv
@@ -34,8 +34,8 @@ To run individual experiments, use `python -m scripts.experiment` with the follo
 __Required arguments (all models):__
 - `--model-name`: one of
     - `tsh`, for "time series homology", the method introduced in the paper;
-    - `baseline_bjornsdottir` for the baseline method from [<em>Dyslexia Prediction from Natural Reading of Danish Texts</em>](https://aclanthology.org/2023.nodalida-1.7/);
-    - `baseline_raatikainen` for the baseline method from [<em>Detection of developmental dyslexia with machine learning using eye movement data</em>](https://www.sciencedirect.com/science/article/pii/S2590005621000345);
+    - `baseline_bjornsdottir` for the baseline method introduced by [Björnsdottir et al.](https://aclanthology.org/2023.nodalida-1.7/);
+    - `baseline_raatikainen` for the baseline method introduced by [Raatikainen et al.](https://doi.org/10.1016/j.array.2021.100087);
     - `baseline_bjornsdottir_with_tsh` for the hybrid model combining the first baseline above with the features from time series homology; and
     - `baseline_raatikainen_with_tsh` for the hybrid model combining the second baseline above with the features from time series homology.
 - `--level`: one of `trial` (for trial-level aggregation) and `reader` (for reader-level aggregation).
