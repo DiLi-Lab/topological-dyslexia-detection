@@ -21,10 +21,11 @@ preferred-citation:
   type: conference-paper
   year: 2026
   collection-type: proceedings
-  collection-title: "2026 Symposium on Eye Tracking Research and Applications"
-  collection-location: "Marrakesh, Morocco"
-  collection-series: "ETRA '26"
+  collection-title: "ETRA '26: Proceedings of the 2026 Symposium on Eye Tracking Research and Applications"
+  conference:
+    name: "Symposium on Eye Tracking Research and Applications"
+    location: "Marrakesh, Morocco"
   publisher:
     name: "Association for Computing Machinery"
-    address: New York, NY, USA
+    address: "New York, NY, USA"
   url: "https://doi.org/10.1145/3797246.3803045"
