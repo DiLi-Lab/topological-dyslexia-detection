@@ -1,3 +1,6 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/964016907.svg)](https://doi.org/10.5281/zenodo.19238279)
+
 This repository contains code to reproduce the results from the paper [<em>Fixation Sequences as Time Series: A Topological Approach to Dyslexia Detection</em>](https://doi.org/10.1145/3797246.3803045).
 In that paper, fixation sequences are interpreted as time series, based on which a topological pipeline for dyslexia detection is introduced.
 The results that this repository creates are obtained by training and evaluating this pipeline on the corpus introduced by [Hollenstein et al.](https://aclanthology.org/2022.lrec-1.182/) and expanded by [Reich et al.](https://aclanthology.org/2024.lrec-main.1187/).
