@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.stats import rv_continuous
-from sklearn.base import (  # type: ignore
+from sklearn.base import (
     BaseEstimator,
     TransformerMixin,
     clone,

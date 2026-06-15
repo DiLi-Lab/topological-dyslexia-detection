@@ -151,7 +151,7 @@ def main(
         "baseline_raatikainen_svc_with_tsh_sigmoid",
         "baseline_raatikainen_svc_with_tsh_arctan",
     ]
-    tex_table_list = [header]
+    tex_table_list: list[str] = [header]
     tex_table_list.extend(
         [
             get_baseline_with_tsh_line(model_name, "trial", outdirs)
