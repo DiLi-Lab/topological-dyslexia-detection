@@ -67,8 +67,8 @@ class TimeSeriesHomology(TransformerMixin, BaseEstimator):
 
     def fit(
         self,
-        X: npt.NDArray,  # noqa: ARG002
-        y: Optional[None] = None,  # noqa: ARG002
+        X: npt.NDArray,  # ruff:ignore[unused-method-argument]
+        y: Optional[None] = None,  # ruff:ignore[unused-method-argument]
     ) -> Self:
         """Does nothing, present here for API consistency with scikit-learn."""
         return self
@@ -76,7 +76,7 @@ class TimeSeriesHomology(TransformerMixin, BaseEstimator):
     def transform(
         self,
         X: list[npt.NDArray],
-        y: Optional[None] = None,  # noqa: ARG002
+        y: Optional[None] = None,  # ruff:ignore[unused-method-argument]
     ) -> list[list[list[list[npt.NDArray]]]]:
         """Computes persistent homology of a collection of (possibly
         multivariate) time series.

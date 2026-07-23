@@ -14,7 +14,7 @@ def weight_by_lifetime(pt):
     return np.abs(pt[1])
 
 
-def weight_constant(pt):  # noqa: ARG001
+def weight_constant(pt):  # ruff:ignore[unused-function-argument]
     """Weight function for persistence images that weighs points in a
     persistence diagram by 1.
     """
@@ -54,7 +54,7 @@ class UniformSlope(rv_continuous):
         self.theta_min = np.arctan(min_slope)
         self.theta_max = np.arctan(max_slope)
 
-    def _rvs(self, *args, size=None, random_state=None):  # noqa: ARG002
+    def _rvs(self, *args, size=None, random_state=None):  # ruff:ignore[unused-method-argument]
         rng = np.random.default_rng(random_state)
         theta = rng.uniform(self.theta_min, self.theta_max, size=size)
         return np.tan(theta)
@@ -71,7 +71,7 @@ class UniformSlopeSym(rv_continuous):
         self.theta_min = np.arctan(min_slope)
         self.theta_max = np.arctan(max_slope)
 
-    def _rvs(self, *args, size=None, random_state=None):  # noqa: ARG002
+    def _rvs(self, *args, size=None, random_state=None):  # ruff:ignore[unused-method-argument]
         rng = np.random.default_rng(random_state)
         theta = rng.uniform(self.theta_min, self.theta_max, size=size)
         return rng.choice([-1, 1], size=size) * np.tan(theta)
@@ -88,7 +88,7 @@ class ListTransformer(BaseEstimator, TransformerMixin):
     def __init__(self, base_estimator):
         self.base_estimator = base_estimator
 
-    def fit(self, X, y=None):  # noqa: ARG002
+    def fit(self, X, y=None):  # ruff:ignore[unused-method-argument]
         try:
             X_concat = np.array([el for x in X for el in x])
         except ValueError:
@@ -114,7 +114,7 @@ class PersistenceProcessor(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
-    def fit(self, X, y=None):  # noqa: ARG002
+    def fit(self, X, y=None):  # ruff:ignore[unused-method-argument]
         self._is_fitted_ = True
         return self
 
@@ -144,7 +144,7 @@ class PersistenceImageProcessor(BaseEstimator, TransformerMixin):
     def __init__(self, feature_range=(0, 1)):
         self.feature_range = feature_range
 
-    def fit(self, X, y=None):  # noqa: ARG002
+    def fit(self, X, y=None):  # ruff:ignore[unused-method-argument]
         self.min_x_, self.max_x_ = X.min(), X.max()
         return self
 
@@ -165,7 +165,7 @@ class MeanAggregator(BaseEstimator, TransformerMixin):
     def __init__(self):
         pass
 
-    def fit(self, X, y=None):  # noqa: ARG002
+    def fit(self, X, y=None):  # ruff:ignore[unused-method-argument]
         self._is_fitted_ = True
         return self
 
@@ -179,7 +179,7 @@ class TupleElementSelector(BaseEstimator, TransformerMixin):
     def __init__(self, element_idx: int):
         self.element_idx = element_idx
 
-    def fit(self, X, y=None):  # noqa: ARG002
+    def fit(self, X, y=None):  # ruff:ignore[unused-method-argument]
         self._is_fitted_ = True
         return self
 

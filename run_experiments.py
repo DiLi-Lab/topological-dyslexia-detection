@@ -1,4 +1,4 @@
-# ruff: noqa: E501
+# ruff:file-ignore[line-too-long]
 import subprocess
 
 from scripts import constants
@@ -8,9 +8,7 @@ n_jobs = 8
 verbose = 1
 seed = 42
 
-common_flag = (
-    f"--n-iter {n_iter} --n-jobs {n_jobs} --outdir outfiles --verbose {verbose} --seed {seed}"
-)
+common_flag = f"--n-iter {n_iter} --n-jobs {n_jobs} --outdir outfiles --verbose {verbose} --seed {seed}"
 
 flag_sets_baseline_bjornsdottir = tuple(  # 2 flag sets
     f"--model-name baseline_bjornsdottir --level {level} --classifier {classifier} {common_flag}"

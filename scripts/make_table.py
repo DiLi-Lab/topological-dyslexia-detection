@@ -1,4 +1,4 @@
-# ruff: noqa: E501
+# ruff:file-ignore[line-too-long]
 import json
 from pathlib import Path
 

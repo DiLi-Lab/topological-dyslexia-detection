@@ -1,4 +1,4 @@
-# ruff: noqa: E501
+# ruff:file-ignore[line-too-long]
 """Constants and hyperparameter definitions for CopCo experiments."""
 
 from scipy.stats import loguniform

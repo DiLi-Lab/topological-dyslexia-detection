@@ -337,7 +337,7 @@ def get_pipeline(
                         base_estimator=TimeSeriesHomology(
                             filtration_type=args.filtration_type,
                             use_extended_persistence=args.use_extended_persistence,
-                            drop_inf_persistence=not args.use_extended_persistence,  # noqa: E501
+                            drop_inf_persistence=not args.use_extended_persistence,  # ruff:ignore[line-too-long]
                             n_jobs=1,
                         )
                     ),
