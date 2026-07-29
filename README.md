@@ -80,7 +80,6 @@ Executing the above will create a directory named `outfiles` that contains the C
 
 __For users of `uv`__
 
-If `uv` is installed, required dependencies can be installed by running `uv pip install -r pyproject.toml`.
 The environment specified in `uv.lock` can be recreated by running `uv sync`.
 
 To reproduce all results from the paper, run `uv run run_experiments.py`. To run individual experiments, use `uv run -m scripts.experiment` with arguments as specified above.
